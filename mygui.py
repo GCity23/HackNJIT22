@@ -79,32 +79,26 @@ while True:
     if toilet_paper == True:
         validNums.append(6)
 
-
-        print("First Name: ", firstName)
-        print("Last Name: ", lastName)
-        print("Phone Num: ", phoneNum)
-
-        print("Box1", tent)
-        print("Box2", backpack)
-        print("Box3", sleeping_bag)
-        print("Box4", flashlight)
-        print("Box5", sleeping_pad)
-        print("Box6", pillow)
-        print("Box7", toilet_paper)
+    break
         #print(lowlist)
 
-        break
 window.close()
 
 import PySimpleGUI as sg2
 sg2.theme("DarkBlue3")
 
-layout2 = []
 layout2Words = ["Best Camping Tent:", "Best Camping Backpack:", "Best Camping Sleeping Bag:", "Best Camping Flashlight:", "Best Camping Sleeping Pad:", "Best Camping Pillow:", "Best First Aid Kit:"]
-for i in range (len(validNums)):
-    myStr = layout2Words[i] + " " + str(lowlist[validNums[i]])
-    layout2.append([sg2.Text(myStr)])
-layout2.append([sg2.Button("OK")])
+
+layout2 = [
+    [sg2.Text("Camping Tent" + str(lowlist[0]))],
+    [sg2.Text("Camping Backpack" + str(lowlist[1]))],
+    [sg2.Text("Camping Sleeping Bag" + str(lowlist[2]))],
+    [sg2.Text("Camping Flashlight" + str(lowlist[3]))],
+    [sg2.Text("Camping Sleeping Pad" + str(lowlist[4]))],
+    [sg2.Text("Camping Pillow" + str(lowlist[5]))],
+    [sg2.Text("Toilet Paper" + str(lowlist[6]))],2
+    [sg2.Button("OK")]
+]
 
 window2 = sg2.Window("Demo", layout2)
 while True:
