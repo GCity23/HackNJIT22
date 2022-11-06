@@ -5,7 +5,7 @@ import letsgo
 
 def sendAiImages(phonenumber, promptStringList):
     account_sid = 'AC20dd6ee6e1757acbb77659101963a8c8'
-    auth_token = '70a2e1f815eb503bc6c84bcf0913df7a'
+    auth_token = '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'
     client = Client(account_sid, auth_token)
 
     links = ImageGenerator.main(promptStringList)
@@ -90,13 +90,13 @@ sg2.theme("DarkBlue3")
 layout2Words = ["Best Camping Tent:", "Best Camping Backpack:", "Best Camping Sleeping Bag:", "Best Camping Flashlight:", "Best Camping Sleeping Pad:", "Best Camping Pillow:", "Best First Aid Kit:"]
 
 layout2 = [
-    [sg2.Text("Camping Tent" + str(lowlist[0]))],
-    [sg2.Text("Camping Backpack" + str(lowlist[1]))],
-    [sg2.Text("Camping Sleeping Bag" + str(lowlist[2]))],
-    [sg2.Text("Camping Flashlight" + str(lowlist[3]))],
-    [sg2.Text("Camping Sleeping Pad" + str(lowlist[4]))],
-    [sg2.Text("Camping Pillow" + str(lowlist[5]))],
-    [sg2.Text("Toilet Paper" + str(lowlist[6]))],
+    [sg2.Text("Camping Tent: " + str(lowlist[0]))],
+    [sg2.Text("Camping Backpack:" + str(lowlist[1]))],
+    [sg2.Text("Camping Sleeping Bag: " + str(lowlist[2]))],
+    [sg2.Text("Camping Flashlight: " + str(lowlist[3]))],
+    [sg2.Text("Camping Sleeping Pad: " + str(lowlist[4]))],
+    [sg2.Text("Camping Pillow: " + str(lowlist[5]))],
+    [sg2.Text("Toilet Paper: " + str(lowlist[6]))],
     [sg2.Button("OK")]
 ]
 
