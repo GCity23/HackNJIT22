@@ -96,7 +96,7 @@ layout2 = [
     [sg2.Text("Camping Flashlight" + str(lowlist[3]))],
     [sg2.Text("Camping Sleeping Pad" + str(lowlist[4]))],
     [sg2.Text("Camping Pillow" + str(lowlist[5]))],
-    [sg2.Text("Toilet Paper" + str(lowlist[6]))],2
+    [sg2.Text("Toilet Paper" + str(lowlist[6]))],
     [sg2.Button("OK")]
 ]
 
