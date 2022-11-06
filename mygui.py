@@ -5,7 +5,7 @@ import letsgo
 
 def sendAiImages(phonenumber, promptStringList):
     account_sid = 'AC20dd6ee6e1757acbb77659101963a8c8'
-    auth_token = 'b71edf515fc2f11a8f9437c1e861059a'
+    auth_token = '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'
     client = Client(account_sid, auth_token)
 
     links = ImageGenerator.main(promptStringList)
