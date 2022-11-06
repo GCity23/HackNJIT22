@@ -5,7 +5,7 @@ import letsgo
 
 def sendAiImages(phonenumber, promptStringList):
     account_sid = 'AC20dd6ee6e1757acbb77659101963a8c8'
-    auth_token = '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'
+    auth_token = 'b71edf515fc2f11a8f9437c1e861059a'
     client = Client(account_sid, auth_token)
 
     links = ImageGenerator.main(promptStringList)
@@ -64,19 +64,19 @@ while True:
         toilet_paper = values[10]
     
     validNums = []
-    if tent == True:
+    if tent == False:
         validNums.append(0)
-    if backpack == True:
+    if backpack == False:
         validNums.append(1)
-    if sleeping_bag == True:
+    if sleeping_bag == False:
         validNums.append(2)
-    if flashlight == True:
+    if flashlight == False:
         validNums.append(3)
-    if sleeping_pad == True:
+    if sleeping_pad == False:
         validNums.append(4)
-    if pillow == True:
+    if pillow == False:
         validNums.append(5)
-    if toilet_paper == True:
+    if toilet_paper == False:
         validNums.append(6)
 
     break
@@ -87,18 +87,21 @@ window.close()
 import PySimpleGUI as sg2
 sg2.theme("DarkBlue3")
 
-layout2Words = ["Best Camping Tent:", "Best Camping Backpack:", "Best Camping Sleeping Bag:", "Best Camping Flashlight:", "Best Camping Sleeping Pad:", "Best Camping Pillow:", "Best First Aid Kit:"]
+layout2Words = ["Best Camping Tent: ", "Best Camping Backpack: ", "Best Camping Sleeping Bag: ", "Best Camping Flashlight: ", "Best Camping Sleeping Pad: ", "Best Camping Pillow: ", "Best First Aid Kit: "]
 
 layout2 = [
-    [sg2.Text("Camping Tent: " + str(lowlist[0]))],
-    [sg2.Text("Camping Backpack:" + str(lowlist[1]))],
-    [sg2.Text("Camping Sleeping Bag: " + str(lowlist[2]))],
-    [sg2.Text("Camping Flashlight: " + str(lowlist[3]))],
-    [sg2.Text("Camping Sleeping Pad: " + str(lowlist[4]))],
-    [sg2.Text("Camping Pillow: " + str(lowlist[5]))],
-    [sg2.Text("Toilet Paper: " + str(lowlist[6]))],
-    [sg2.Button("OK")]
+    # [sg2.Text("Camping Tent: " + str(lowlist[0]))],
+    # [sg2.Text("Camping Backpack:" + str(lowlist[1]))],
+    # [sg2.Text("Camping Sleeping Bag: " + str(lowlist[2]))],
+    # [sg2.Text("Camping Flashlight: " + str(lowlist[3]))],
+    # [sg2.Text("Camping Sleeping Pad: " + str(lowlist[4]))],
+    # [sg2.Text("Camping Pillow: " + str(lowlist[5]))],
+    # [sg2.Text("Toilet Paper: " + str(lowlist[6]))],
+    # [sg2.Button("OK")]
 ]
+for i in range(len(validNums)):
+    layout2.append([sg2.Text(layout2Words[validNums[i]] + str(lowlist[validNums[i]]))])
+layout2.append([sg2.Button("OK")])
 
 window2 = sg2.Window("Demo", layout2)
 while True:
